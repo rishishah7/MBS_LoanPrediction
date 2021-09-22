@@ -21,7 +21,6 @@ def predict():
 		int_features = [int(x) for x in request.form.values()]
 		final_features = np.array(int_features)
 		my_prediction = test_model(final_features)
-		print(my_prediction)
 	return render_template("index.html",prediction = my_prediction)
 
 
